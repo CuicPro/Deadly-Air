@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'RoadRage';
+    src: url('../Fonts/RoadRage-Regular.ttf') format('truetype'); /* Chemin corrigé */
+  }
+  
+  @font-face {
+    font-family: 'Oswald-ExtraLight';
+    src: url('../Fonts/static/Oswald-ExtraLight.ttf') format('truetype'); /* Chemin corrigé */
+    font-weight: 200; /* ExtraLight */
+  }
+  
+  @font-face {
+    font-family: 'Oswald-Light';
+    src: url('../Fonts/static/Oswald-Light.ttf') format('truetype'); /* Chemin corrigé */
+    font-weight: 300; /* Light */
+  }
+  
+  @font-face {
+    font-family: 'Oswald-Regular';
+    src: url('../Fonts/static/Oswald-Regular.ttf') format('truetype'); /* Chemin corrigé */
+    font-weight: 400; /* Regular */
+  }
+  
+  @font-face {
+    font-family: 'Oswald-Medium';
+    src: url('../Fonts/static/Oswald-Medium.ttf') format('truetype'); /* Chemin corrigé */
+    font-weight: 500; /* Medium */
+  }
+  
+  @font-face {
+    font-family: 'Oswald-SemiBold';
+    src: url('../Fonts/static/Oswald-SemiBold.ttf') format('truetype'); /* Chemin corrigé */
+    font-weight: 600; /* SemiBold */
+  }
+  
+  @font-face {
+    font-family: 'Oswald-Bold';
+    src: url('../Fonts/static/Oswald-Bold.ttf') format('truetype'); /* Chemin corrigé */
+    font-weight: 700; /* Bold */
+  }
+
+
+.text-stroke-3 {-webkit-text-stroke: 3px #ffffff;}
+#effect-btn-VoirPlusDeBlog{
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+#btn-VoirPlusDeBlog:hover #effect-btn-VoirPlusDeBlog{
+    border-radius: 8px;
+}
+
+
+  
