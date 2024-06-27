@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Deadly Air</title>
     
+        <script async
+            src="https://js.stripe.com/v3/buy-button.js">
+        </script>
+
         <link rel="stylesheet" href="Assets/css/styles.css">
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
@@ -174,38 +178,16 @@
             <i class="text-vert-1 text-xl">— Supportez Deadly Air et montrez votre passion pour le bike avec nos produit exclusifs.</i>
         </header>
         <div class="flex items-center justify-center gap-8">
-            <article class="flex flex-col border-4 border-vert-2 text-blanc rounded-xl max-w-96 min-w-80 h-[40vh] items-center">
-                <img src="https://www.band-of-riders.com/1272-medium_default/no-brain-noir-oversize.jpg" alt="Produit Deadly Air" class="w-full flex-1 object-cover rounded-tl-lg rounded-tr-lg" style="height: calc(100% - 4rem);">
-                <div class="flex justify-between items-center h-16 w-full bg-vert-1 rounded-bl-lg rounded-br-lg">
-                    <div class="flex flex-col items-center justify-center p-2.5">
-                        <h4>Produit</h4>
-                        <button class="w-full bg-vert-2 rounded-lg font-oswald_extralight">Voir</button>
-                    </div>
-                    <strong class="font-oswald_bold text-4xl p-2.5">20€</strong>
-                </div>
-            </article>
-
-            <article class="flex flex-col border-4 border-vert-2 text-blanc rounded-xl max-w-96 min-w-80 h-[40vh] items-center">
-                <img src="https://cdn.skatedeluxe.com/thumb/OrEkvf5cTNRLQBq9JbkMhtnQY3c=/fit-in/600x700/filters:fill(white):brightness(-4)/product/161543-0-Antix-Caecus.jpg" alt="Produit Deadly Air" class="w-full flex-1 object-cover rounded-tl-lg rounded-tr-lg" style="height: calc(100% - 4rem);">
-                <div class="flex justify-between items-center h-16 w-full bg-vert-1 rounded-bl-lg rounded-br-lg">
-                    <div class="flex flex-col items-center justify-center p-2.5">
-                        <h4>Produit</h4>
-                        <button class="w-full bg-vert-2 rounded-lg font-oswald_extralight">Voir</button>
-                    </div>
-                    <strong class="font-oswald_bold text-4xl p-2.5">20€</strong>
-                </div>
-            </article>
-
-            <article class="flex flex-col border-4 border-vert-2 text-blanc rounded-xl max-w-96 min-w-80 h-[40vh] items-center">
-                <img src="https://product-cdn-frz.alltricks.com/large/726/999726/1999726/3873960" alt="Produit Deadly Air" class="w-full flex-1 object-cover rounded-tl-lg rounded-tr-lg" style="height: calc(100% - 4rem);">
-                <div class="flex justify-between items-center h-16 w-full bg-vert-1 rounded-bl-lg rounded-br-lg">
-                    <div class="flex flex-col items-center justify-center p-2.5">
-                        <h4>Produit</h4>
-                        <button class="w-full bg-vert-2 rounded-lg font-oswald_extralight">Voir</button>
-                    </div>
-                    <strong class="font-oswald_bold text-4xl p-2.5">20€</strong>
-                </div>
-            </article>
+            <stripe-buy-button class="shadow-2xl"
+              buy-button-id="buy_btn_1PWIuu04M5kzYwtLd07fN3Yd"
+              publishable-key="pk_test_51PWIkA04M5kzYwtLw3sfjOEcCfScxJoYlSr5apaG758qY0AixsxFqJftHyUzWB8ObsDhNciwzgdlSsB4dFsvjeDo00lYVnQHOc"
+            >
+            </stripe-buy-button>
+            <stripe-buy-button class="shadow-2xl"
+              buy-button-id="buy_btn_1PWJ2G04M5kzYwtLnrU8VKkr"
+              publishable-key="pk_test_51PWIkA04M5kzYwtLw3sfjOEcCfScxJoYlSr5apaG758qY0AixsxFqJftHyUzWB8ObsDhNciwzgdlSsB4dFsvjeDo00lYVnQHOc"
+            >
+            </stripe-buy-button>
         </div>
     </section>
     <section id="Contact" class="flex flex-col items-center justify-around pt-16 h-screen text-blanc bg-gris">
