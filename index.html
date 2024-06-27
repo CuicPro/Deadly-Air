@@ -5,29 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Deadly Air</title>
     
-        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script type="text/javascript">
-            (function() {
-                emailjs.init("QaM4idYTYEYxTu8-W"); // Remplacez par votre clé publique exacte
-            })();
-        </script>
-        <script type="text/javascript">
-            window.onload = function() {
-                document.getElementById('contact-form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    // Remplacez 'your_service_id' et 'your_template_id' par les IDs corrects
-                    emailjs.sendForm('service_muxdil4', 'contact_form', this)
-                        .then(function() {
-                            console.log('SUCCESS!');
-                            alert('Merci ! Votre message a été envoyé.');
-                        }, function(error) {
-                            console.log('FAILED...', error);
-                            alert('Erreur : votre message n\'a pas pu être envoyé.');
-                        });
-                });
-            }
-        </script>
-    
         <link rel="stylesheet" href="Assets/css/styles.css">
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
@@ -238,7 +215,7 @@
         </header>
         <div class="flex jsutify-evenly items-center flex-1 gap-16">
             <div class="h-2/4">
-                <form id="contact-form" action="https://formspree.io/f/{YOUR_FORM_ID}" method="post " class="flex flex-col gap-y-16 h-full">
+                <form   action="https://formspree.io/f/mzzppqep" method="POST" class="flex flex-col gap-y-16 h-full">
                     <div class="flex justify-between gap-16">
                         <input type="text" id="name" name="name" placeholder="Nom" class="bg-noir h-12 rounded-lg w-4/6 px-2.5 py-4" autocomplete="off" required>
                         <input type="email" id="email" name="email" placeholder="E-Mail" class="bg-noir h-12 rounded-lg w-4/6 px-2.5 py-4" required>
