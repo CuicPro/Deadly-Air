@@ -54,5 +54,32 @@
     border-radius: 8px;
 }
 
+#Apropos article {
+  scale: 0.2;
+  opacity: 0;
+}
 
-  
+.animation-apparition-a-propos-1{animation: apparition-a-propos .3s .2s  forwards ease-out;}
+.animation-apparition-a-propos-2{animation: apparition-a-propos .3s .4s  forwards ease-out;}  
+.animation-apparition-a-propos-3{animation: apparition-a-propos .3s .6s  forwards ease-out;}  
+.animation-apparition-a-propos-4{animation: apparition-a-propos .3s .8s  forwards ease-out;}  
+.animation-apparition-a-propos-5{animation: apparition-a-propos .3s 1.0s forwards ease-out;}  
+.animation-apparition-a-propos-6{animation: apparition-a-propos .3s 1.2s forwards ease-out;}  
+.animation-apparition-a-propos-7{animation: apparition-a-propos .3s 1.4s forwards ease-out;}  
+.animation-apparition-a-propos-8{animation: apparition-a-propos .3s 1.6s forwards ease-out;}  
+.animation-apparition-a-propos-9{animation: apparition-a-propos .3s 1.8s forwards ease-out;}  
+
+.animation-apparition-a-propos-1.reverse{animation: apparition-a-propos-reverse .3s 1.8s forwards ease-out;}
+.animation-apparition-a-propos-2.reverse{animation: apparition-a-propos-reverse .3s 1.6s forwards ease-out;}  
+.animation-apparition-a-propos-3.reverse{animation: apparition-a-propos-reverse .3s 1.4s forwards ease-out;}  
+.animation-apparition-a-propos-4.reverse{animation: apparition-a-propos-reverse .3s 1.2s forwards ease-out;}  
+.animation-apparition-a-propos-5.reverse{animation: apparition-a-propos-reverse .3s 1.0s forwards ease-out;}  
+.animation-apparition-a-propos-6.reverse{animation: apparition-a-propos-reverse .3s .8s forwards ease-out;}  
+.animation-apparition-a-propos-7.reverse{animation: apparition-a-propos-reverse .3s .6s forwards ease-out;}  
+.animation-apparition-a-propos-8.reverse{animation: apparition-a-propos-reverse .3s .4s forwards ease-out;}  
+.animation-apparition-a-propos-9.reverse{animation: apparition-a-propos-reverse .3s .2s forwards ease-out;}  
+
+
+
+@keyframes apparition-a-propos {from { opacity:0; scale: 0.2;}to { opacity:1; scale: 1;}}
+@keyframes apparition-a-propos-reverse {from { opacity:1; scale: 1;}to { opacity:0; scale: 0.2;}}
