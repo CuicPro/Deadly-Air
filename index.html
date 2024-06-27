@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth focus:scroll-auto">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deadly Air</title>
-
-    <link rel="stylesheet" href="Assets/css/styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                'trans50': '#ffffff50',
-                'blanc': '#ffffff',
-                'gris': '#333333',
-                'noir': '#000000',
-                'vert': {
-                    1 : "#0D962B",
-                    2 : "#025300"
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deadly Air</title>
+    
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init("QaM4idYTYEYxTu8-W"); // Remplacez par votre clé publique exacte
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // Remplacez 'your_service_id' et 'your_template_id' par les IDs corrects
+                    emailjs.sendForm('service_muxdil4', 'contact_form', this)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                            alert('Merci ! Votre message a été envoyé.');
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                            alert('Erreur : votre message n\'a pas pu être envoyé.');
+                        });
+                });
+            }
+        </script>
+    
+        <link rel="stylesheet" href="Assets/css/styles.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    'trans70': '#ffffff70',
+                    'blanc': '#ffffff',
+                    'gris': '#333333',
+                    'noir': '#000000',
+                    'vert': {
+                        1 : "#0D962B",
+                        2 : "#025300"
+                    }
+                  },
+                  fontFamily: {
+                    roadrage: ['"RoadRage"', 'sans-serif'],
+                    oswald_extralight: ['"Oswald-ExtraLight"', 'sans-serif'],
+                    oswald_light: ['"Oswald-Light"', 'sans-serif'],
+                    oswald_regular: ['"Oswald-Regular"', 'sans-serif'],
+                    oswald_medium: ['"Oswald-Medium"', 'sans-serif'],
+                    oswald_semibold: ['"Oswald-SemiBold"', 'sans-serif'],
+                    oswald_bold: ['"Oswald-Bold"', 'sans-serif'],
+                  }
                 }
-              },
-              fontFamily: {
-                roadrage: ['"RoadRage"', 'sans-serif'],
-                oswald_extralight: ['"Oswald-ExtraLight"', 'sans-serif'],
-                oswald_light: ['"Oswald-Light"', 'sans-serif'],
-                oswald_regular: ['"Oswald-Regular"', 'sans-serif'],
-                oswald_medium: ['"Oswald-Medium"', 'sans-serif'],
-                oswald_semibold: ['"Oswald-SemiBold"', 'sans-serif'],
-                oswald_bold: ['"Oswald-Bold"', 'sans-serif'],
               }
             }
-          }
-        }
-      </script>
-</head>
-<body>
-    <nav class="z-[10000] fixed top-0 left-0 flex justify-between items-center w-full h-20 px-12 py-2.5 bg-trans50 backdrop-blur-xl">
+          </script>
+    </head>
+<body class="overflow-x-hidden">
+    <nav class="z-[10000] fixed top-0 left-0 flex justify-between items-center w-full h-20 px-12 py-2.5 bg-trans70">
         <a href="#" class="flex justify-between items-center px-10 h-full gap-16">
             <img src="Assets/Media/Logo.webp" alt="logo" class="object-cover h-12 w-12 rounded-xl">
             <h2 class="font-roadrage text-4xl">Deadly Air</h2>
@@ -50,7 +73,7 @@
         <h1 class="z-10 text-9xl font-roadrage text-transparent bg-clip-text border-solid text-stroke-3 select-none">Vivez l'adrénaline avec Deadly Air</h1>
     </section>
 
-    <section id="Apropos" class="flex flex-col h-auto min-h-screen">
+    <section id="Apropos" class="flex flex-col h-auto pt-16 min-h-screen">
         <header class="flex justify-between items-center px-8 py-2.5 h-20 w-full">
             <h2 class="font-roadrage text-6xl">À Propos</h2>
             <i class="text-vert-1 text-xl">— Vivre pour rouler, rouler pour vivre.</i>
@@ -111,7 +134,7 @@
         </div>
     </section>
 
-    <section id="Blog" class="h-screen">
+    <section id="Blog" class="flex flex-col items-center justify-around h-screen">
         <header class="flex justify-between items-center px-8 py-2.5 h-20 w-full">
             <h2 class="font-roadrage text-6xl">Blog</h2>
             <i class="text-vert-1 text-xl"></i>
@@ -168,45 +191,81 @@
             </button>
         </div>
     </section>
-    <section id="Boutique">
+    <section id="Boutique" class="flex flex-col items-center justify-around h-screen">
         <header class="flex justify-between items-center px-8 py-2.5 h-20 w-full">
             <h2 class="font-roadrage text-6xl">Boutique</h2>
             <i class="text-vert-1 text-xl">— Supportez Deadly Air et montrez votre passion pour le bike avec nos produit exclusifs.</i>
         </header>
         <div class="flex items-center justify-center gap-8">
-            <article class="border-4 border-vert-2 text-blanc rounded-xl max-w-96">
-                <img src="Assets/Media/Logo.webp" alt="Produit Deadly Air" class="w-full h-full object-cover">
-                <div class="flex justify-between h-16 w-full bg-vert-1">
-                    <div class="flex flex-col items-center justify-center bg-vert-1 px-4 py-2.5">
+            <article class="flex flex-col border-4 border-vert-2 text-blanc rounded-xl max-w-96 min-w-80 h-[40vh] items-center">
+                <img src="https://www.band-of-riders.com/1272-medium_default/no-brain-noir-oversize.jpg" alt="Produit Deadly Air" class="w-full flex-1 object-cover rounded-tl-lg rounded-tr-lg" style="height: calc(100% - 4rem);">
+                <div class="flex justify-between items-center h-16 w-full bg-vert-1 rounded-bl-lg rounded-br-lg">
+                    <div class="flex flex-col items-center justify-center p-2.5">
                         <h4>Produit</h4>
-                        <button class="font-oswald_extralight">Voir</button>
+                        <button class="w-full bg-vert-2 rounded-lg font-oswald_extralight">Voir</button>
                     </div>
-                    <strong class="font-oswald_bold text-6xl">20€</strong>
+                    <strong class="font-oswald_bold text-4xl p-2.5">20€</strong>
                 </div>
             </article>
 
-            <article class="border-4 border-vert-2 text-blanc rounded-xl max-w-96">
-                <img src="Assets/Media/Logo.webp" alt="Produit Deadly Air" class="w-full h-full object-cover">
-                <div class="flex justify-between h-16 w-full bg-vert-1">
-                    <div class="flex flex-col items-center justify-center bg-vert-1 px-4 py-2.5">
+            <article class="flex flex-col border-4 border-vert-2 text-blanc rounded-xl max-w-96 min-w-80 h-[40vh] items-center">
+                <img src="https://cdn.skatedeluxe.com/thumb/OrEkvf5cTNRLQBq9JbkMhtnQY3c=/fit-in/600x700/filters:fill(white):brightness(-4)/product/161543-0-Antix-Caecus.jpg" alt="Produit Deadly Air" class="w-full flex-1 object-cover rounded-tl-lg rounded-tr-lg" style="height: calc(100% - 4rem);">
+                <div class="flex justify-between items-center h-16 w-full bg-vert-1 rounded-bl-lg rounded-br-lg">
+                    <div class="flex flex-col items-center justify-center p-2.5">
                         <h4>Produit</h4>
-                        <button class="font-oswald_extralight">Voir</button>
+                        <button class="w-full bg-vert-2 rounded-lg font-oswald_extralight">Voir</button>
                     </div>
-                    <strong class="font-oswald_bold text-6xl">20€</strong>
+                    <strong class="font-oswald_bold text-4xl p-2.5">20€</strong>
                 </div>
             </article>
 
-            <article class="border-4 border-vert-2 text-blanc rounded-xl max-w-96">
-                <img src="Assets/Media/Logo.webp" alt="Produit Deadly Air" class="w-full h-full object-cover">
-                <div class="flex justify-between h-16 w-full bg-vert-1">
-                    <div class="flex flex-col items-center justify-center bg-vert-1 px-4 py-2.5">
+            <article class="flex flex-col border-4 border-vert-2 text-blanc rounded-xl max-w-96 min-w-80 h-[40vh] items-center">
+                <img src="https://product-cdn-frz.alltricks.com/large/726/999726/1999726/3873960" alt="Produit Deadly Air" class="w-full flex-1 object-cover rounded-tl-lg rounded-tr-lg" style="height: calc(100% - 4rem);">
+                <div class="flex justify-between items-center h-16 w-full bg-vert-1 rounded-bl-lg rounded-br-lg">
+                    <div class="flex flex-col items-center justify-center p-2.5">
                         <h4>Produit</h4>
-                        <button class="font-oswald_extralight">Voir</button>
+                        <button class="w-full bg-vert-2 rounded-lg font-oswald_extralight">Voir</button>
                     </div>
-                    <strong class="font-oswald_bold text-6xl">20€</strong>
+                    <strong class="font-oswald_bold text-4xl p-2.5">20€</strong>
                 </div>
             </article>
         </div>
     </section>
+    <section id="Contact" class="flex flex-col items-center justify-around pt-16 h-screen text-blanc bg-gris">
+        <header class="flex justify-between items-center px-8 py-2.5 h-20 w-full">
+            <h2 class="font-roadrage text-6xl">Contact</h2>
+            <i class="text-vert-1 text-xl">-  Vous avez des questions, des suggestions, ou vous voulez simplement dire bonjour ? Nous aimerions avoir de vos nouvelles.</i>
+        </header>
+        <div class="flex jsutify-evenly items-center flex-1 gap-16">
+            <div class="h-2/4">
+                <form id="contact-form" action="https://formspree.io/f/{YOUR_FORM_ID}" method="post " class="flex flex-col gap-y-16 h-full">
+                    <div class="flex justify-between gap-16">
+                        <input type="text" id="name" name="name" placeholder="Nom" class="bg-noir h-12 rounded-lg w-4/6 px-2.5 py-4" autocomplete="off" required>
+                        <input type="email" id="email" name="email" placeholder="E-Mail" class="bg-noir h-12 rounded-lg w-4/6 px-2.5 py-4" required>
+                    </div>
+                    <textarea id="message" name="message" class="bg-noir rounded-lg resize-none h-full px-2.5 py-4" placeholder="Ecrit ton message ici" autocomplete="off" minlength="150" maxlength="450" required></textarea>
+                    <button class="w-full h-12 bg-vert-1 rounded-lg p-2.5">Envoyer</button>
+                </form>
+            </div>
+            <div class="h-2/4 flex flex-col gap-y-16">
+                <a class="flex gap-4" href="mailto:cuic.professional@gmail.com"><svg width="38" height="30" viewBox="0 0 38 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 5C0.5 3.67392 0.987275 2.40215 1.85463 1.46447C2.72199 0.526784 3.89837 0 5.125 0H32.875C34.1016 0 35.278 0.526784 36.1454 1.46447C37.0127 2.40215 37.5 3.67392 37.5 5V25C37.5 26.3261 37.0127 27.5979 36.1454 28.5355C35.278 29.4732 34.1016 30 32.875 30H5.125C3.89837 30 2.72199 29.4732 1.85463 28.5355C0.987275 27.5979 0.5 26.3261 0.5 25V5ZM5.125 2.5C4.51169 2.5 3.92349 2.76339 3.48982 3.23223C3.05614 3.70107 2.8125 4.33696 2.8125 5V5.5425L19 16.0425L35.1875 5.5425V5C35.1875 4.33696 34.9439 3.70107 34.5102 3.23223C34.0765 2.76339 33.4883 2.5 32.875 2.5H5.125ZM35.1875 8.4575L24.3002 15.52L35.1875 22.7625V8.4575ZM35.1089 25.6475L22.0664 16.97L19 18.9575L15.9336 16.97L2.89113 25.645C3.02253 26.177 3.31273 26.6472 3.71666 26.9826C4.1206 27.3181 4.61566 27.4999 5.125 27.5H32.875C33.384 27.5001 33.8789 27.3186 34.2828 26.9836C34.6867 26.6487 34.977 26.179 35.1089 25.6475ZM2.8125 22.7625L13.6998 15.52L2.8125 8.4575V22.7625Z" fill="#0D962B"/></svg><span>cuic.professional@gmail.com</span></a>
+                <a class="flex gap-4" href="tel:06.77.56.32.72"><svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.03515 1.29011C4.36321 0.962511 4.75715 0.708379 5.19086 0.544556C5.62456 0.380733 6.08812 0.310959 6.55083 0.339859C7.01354 0.368758 7.46482 0.49567 7.87477 0.712185C8.28472 0.9287 8.64398 1.22987 8.92874 1.59575L12.2943 5.9197C12.9111 6.71286 13.1286 7.74603 12.8849 8.72108L11.8593 12.8275C11.8066 13.0402 11.8097 13.2629 11.8681 13.4741C11.9266 13.6853 12.0385 13.8778 12.193 14.0332L16.7997 18.6403C16.9553 18.7951 17.1481 18.9072 17.3597 18.9657C17.5712 19.0242 17.7942 19.027 18.0072 18.974L22.1115 17.9484C22.5926 17.8288 23.0947 17.8198 23.5798 17.9221C24.065 18.0244 24.5207 18.2353 24.9126 18.539L29.2362 21.9029C30.7906 23.1124 30.9331 25.4093 29.5418 26.7988L27.6032 28.7376C26.2157 30.1252 24.142 30.7346 22.209 30.0539C17.2604 28.3149 12.7678 25.482 9.06561 21.766C5.35018 18.0642 2.51748 13.5719 0.778374 8.62357C0.0996456 6.69223 0.709001 4.61651 2.09646 3.22895L4.03515 1.29011Z" fill="#0D962B"/></svg><span>06.77.56.32.72</span></a>
+                <a class="flex gap-4" href=""><svg width="38" height="31" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.1191 0.666504H19.3249C21.2259 0.674512 30.8581 0.75459 33.4552 1.56071C34.2403 1.80674 34.9557 2.28628 35.53 2.95143C36.1042 3.61657 36.5172 4.44402 36.7276 5.35108C36.9612 6.36541 37.1254 7.70806 37.2364 9.09341L37.2595 9.37101L37.3104 10.065L37.3289 10.3426C37.4792 12.7823 37.4977 15.0673 37.5 15.5664V15.7666C37.4977 16.2844 37.4769 18.7242 37.3104 21.2653L37.2919 21.5456L37.271 21.8232C37.1554 23.35 36.9843 24.8662 36.7276 25.9819C36.5172 26.889 36.1042 27.7164 35.53 28.3816C34.9557 29.0467 34.2403 29.5263 33.4552 29.7723C30.7725 30.6051 20.5761 30.6638 19.163 30.6665H18.8346C18.12 30.6665 15.1645 30.6505 12.0655 30.5277L11.6724 30.5117L11.4712 30.501L11.0757 30.4823L10.6803 30.4636C8.11323 30.3328 5.66876 30.122 4.5425 29.7696C3.75765 29.5238 3.0424 29.0447 2.46818 28.38C1.89395 27.7154 1.48085 26.8885 1.27011 25.9819C1.01341 24.8688 0.842271 23.35 0.726639 21.8232L0.708138 21.5429L0.689637 21.2653C0.574845 19.4566 0.511599 17.6441 0.5 15.8307L0.5 15.5023C0.504625 14.9284 0.523126 12.9452 0.648009 10.7564L0.664198 10.4814L0.671136 10.3426L0.689637 10.065L0.740515 9.37101L0.763641 9.09341C0.874648 7.70806 1.03885 6.36274 1.27242 5.35108C1.48281 4.44402 1.89576 3.61657 2.47 2.95143C3.04425 2.28628 3.75969 1.80674 4.54482 1.56071C5.67107 1.21371 8.11554 1.00016 10.6826 0.866699L11.0757 0.848015L11.4735 0.831999L11.6724 0.823992L12.0678 0.805307C14.2688 0.723636 16.4707 0.678253 18.6728 0.669173L19.1191 0.666504ZM15.3009 9.23488V22.0955L24.9146 15.6678L15.3009 9.23488Z" fill="#0D962B"/></svg><span>Youtube</span></a>
+                <a class="flex gap-4" href=""><svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 0C11.4294 0 10.9175 0.01875 9.31812 0.09C7.71875 0.165 6.62938 0.41625 5.675 0.7875C4.67346 1.16311 3.76651 1.75387 3.01813 2.51813C2.25387 3.26651 1.66311 4.17346 1.2875 5.175C0.91625 6.1275 0.663125 7.21875 0.59 8.8125C0.51875 10.4156 0.5 10.9256 0.5 15.0019C0.5 19.0744 0.51875 19.5844 0.59 21.1838C0.665 22.7812 0.91625 23.8706 1.2875 24.825C1.67188 25.8112 2.18375 26.6475 3.01813 27.4819C3.85063 28.3162 4.68688 28.83 5.67313 29.2125C6.62938 29.5837 7.71688 29.8369 9.31437 29.91C10.9156 29.9813 11.4256 30 15.5 30C19.5744 30 20.0825 29.9813 21.6838 29.91C23.2794 29.835 24.3725 29.5837 25.3269 29.2125C26.3277 28.8366 27.234 28.2459 27.9819 27.4819C28.8162 26.6475 29.3281 25.8112 29.7125 24.825C30.0819 23.8706 30.335 22.7812 30.41 21.1838C30.4813 19.5844 30.5 19.0744 30.5 15C30.5 10.9256 30.4813 10.4156 30.41 8.81437C30.335 7.21875 30.0819 6.1275 29.7125 5.175C29.3369 4.17346 28.7461 3.26651 27.9819 2.51813C27.2335 1.75387 26.3265 1.16311 25.325 0.7875C24.3687 0.41625 23.2775 0.163125 21.6819 0.09C20.0806 0.01875 19.5725 0 15.4963 0H15.5ZM14.1556 2.70375H15.5019C19.5069 2.70375 19.9812 2.71688 21.5619 2.79C23.0244 2.85562 23.8194 3.10125 24.3481 3.30562C25.0475 3.5775 25.5481 3.90375 26.0731 4.42875C26.5981 4.95375 26.9225 5.4525 27.1944 6.15375C27.4006 6.68062 27.6444 7.47563 27.71 8.93813C27.7831 10.5188 27.7981 10.9931 27.7981 14.9963C27.7981 18.9994 27.7831 19.4756 27.71 21.0562C27.6444 22.5187 27.3988 23.3119 27.1944 23.8406C26.9522 24.4911 26.5686 25.0796 26.0712 25.5637C25.5462 26.0887 25.0475 26.4131 24.3463 26.685C23.8213 26.8913 23.0262 27.135 21.5619 27.2025C19.9812 27.2738 19.5069 27.2906 15.5019 27.2906C11.4969 27.2906 11.0206 27.2738 9.44 27.2025C7.9775 27.135 7.18437 26.8913 6.65562 26.685C6.00469 26.4436 5.4155 26.0606 4.93062 25.5637C4.43239 25.0793 4.04812 24.49 3.80562 23.8387C3.60125 23.3119 3.35562 22.5169 3.29 21.0544C3.21875 19.4737 3.20375 18.9994 3.20375 14.9925C3.20375 10.9856 3.21875 10.515 3.29 8.93437C3.3575 7.47187 3.60125 6.67688 3.8075 6.14813C4.07938 5.44875 4.40562 4.94812 4.93062 4.42312C5.45563 3.89812 5.95437 3.57375 6.65562 3.30188C7.18437 3.09563 7.9775 2.85187 9.44 2.78437C10.8238 2.72062 11.36 2.70187 14.1556 2.7V2.70375ZM23.5081 5.19375C23.2717 5.19375 23.0377 5.24031 22.8193 5.33077C22.6009 5.42123 22.4025 5.55381 22.2353 5.72096C22.0682 5.8881 21.9356 6.08653 21.8451 6.30492C21.7547 6.52331 21.7081 6.75737 21.7081 6.99375C21.7081 7.23013 21.7547 7.46419 21.8451 7.68258C21.9356 7.90097 22.0682 8.0994 22.2353 8.26654C22.4025 8.43369 22.6009 8.56627 22.8193 8.65673C23.0377 8.74719 23.2717 8.79375 23.5081 8.79375C23.9855 8.79375 24.4433 8.60411 24.7809 8.26654C25.1185 7.92898 25.3081 7.47114 25.3081 6.99375C25.3081 6.51636 25.1185 6.05852 24.7809 5.72096C24.4433 5.38339 23.9855 5.19375 23.5081 5.19375ZM15.5019 7.2975C14.4801 7.28156 13.4654 7.46904 12.5168 7.84901C11.5682 8.22899 10.7047 8.79388 9.97653 9.51079C9.24835 10.2277 8.67006 11.0823 8.27533 12.0249C7.8806 12.9674 7.67731 13.9791 7.67731 15.0009C7.67731 16.0228 7.8806 17.0345 8.27533 17.977C8.67006 18.9196 9.24835 19.7742 9.97653 20.4911C10.7047 21.208 11.5682 21.7729 12.5168 22.1529C13.4654 22.5328 14.4801 22.7203 15.5019 22.7044C17.5241 22.6728 19.4529 21.8473 20.8718 20.4061C22.2908 18.9649 23.0861 17.0234 23.0861 15.0009C23.0861 12.9784 22.2908 11.037 20.8718 9.59578C19.4529 8.15454 17.5241 7.32905 15.5019 7.2975ZM15.5019 9.99938C16.1586 9.99938 16.8088 10.1287 17.4155 10.38C18.0222 10.6313 18.5735 10.9997 19.0379 11.464C19.5022 11.9284 19.8705 12.4796 20.1219 13.0863C20.3732 13.693 20.5025 14.3433 20.5025 15C20.5025 15.6567 20.3732 16.307 20.1219 16.9137C19.8705 17.5204 19.5022 18.0716 19.0379 18.536C18.5735 19.0003 18.0222 19.3687 17.4155 19.62C16.8088 19.8713 16.1586 20.0006 15.5019 20.0006C14.1756 20.0006 12.9037 19.4738 11.9659 18.536C11.0281 17.5982 10.5013 16.3262 10.5013 15C10.5013 13.6738 11.0281 12.4018 11.9659 11.464C12.9037 10.5262 14.1756 9.99938 15.5019 9.99938Z" fill="#0D962B"/></svg><span>Instagram</span></a>
+            </div>
+        </div>
+    </section>
+    <footer class="flex flex-col min-h-[100px] bg-gris text-blanc border-t-2 border-trans70">
+        <img src="Assets/Media/Logo.webp" alt="Logo" class="max-h-[80px] max-w-[80px] m-4 rounded-lg">
+        <div class="flex justify-between w-full px-2.5 py-4 text-xl">
+            <div>
+                <a href="politique_de_confidentialite.html" class="underline">Politique de confidentialité</a>
+                <a href="cdu.html" class="underline">Conditions d'utilisation</a>
+            </div>
+            <div>
+                <p>© 2024 Deadly Air. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

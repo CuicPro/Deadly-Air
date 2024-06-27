@@ -40,6 +40,11 @@
   }
 
 
+*{
+  &::-webkit-scrollbar{width: 5px; height: 0px; background-color: #025300;}
+  &::-webkit-scrollbar-thumb{border-radius: 100px; width: 3px; border: 1px solid transparent; background-color: #0D962B;}
+}
+
 .text-stroke-3 {-webkit-text-stroke: 3px #ffffff;}
 #effect-btn-VoirPlusDeBlog{
     border-radius: 50%;
