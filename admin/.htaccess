@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Restricted Access"
-AuthUserFile "C:/wamp64/www/Assets/.htpasswd"
-Require valid-user

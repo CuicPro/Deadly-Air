@@ -1,3 +1,22 @@
+<?php
+session_start();
+include '../Assets/php/config.php';
+
+if (!isset($_SESSION['username'])) {
+    header("Location: ../index.html");
+    exit();
+}
+    // $stmt = $conn->prepare("SELECT id username FROM users WHERE verification_code = ?");
+    // $stmt->bind_param("s", $code);
+    // $stmt->execute();
+    // $stmt->store_result();
+    // if($stmt->num_rows > 0) {
+    //     $stmt->bind_result($username);
+    //     $stmt->fetch();
+    // }
+    $username = $_SESSION['username'];
+?>
+
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth focus:scroll-auto">
   <head>
@@ -7,35 +26,9 @@
 
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
-    <link rel="stylesheet" href="Assets/css/styles.css" />
+    <link rel="stylesheet" href="../Assets/css/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              trans70: "#ffffff70",
-              blanc: "#ffffff",
-              gris: "#333333",
-              noir: "#000000",
-              vert: {
-                1: "#0D962B",
-                2: "#025300",
-              },
-            },
-            fontFamily: {
-              roadrage: ['"RoadRage"', "sans-serif"],
-              oswald_extralight: ['"Oswald-ExtraLight"', "sans-serif"],
-              oswald_light: ['"Oswald-Light"', "sans-serif"],
-              oswald_regular: ['"Oswald-Regular"', "sans-serif"],
-              oswald_medium: ['"Oswald-Medium"', "sans-serif"],
-              oswald_semibold: ['"Oswald-SemiBold"', "sans-serif"],
-              oswald_bold: ['"Oswald-Bold"', "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
+    <script src="../Assets/js/tailwind.config.js"></script>
     <script>
       function formatDate(date) {
         // Récupérer le jour, le mois et l'année
@@ -96,7 +89,7 @@
       <h1
         class="z-10 text-9xl font-roadrage text-transparent bg-clip-text border-solid text-stroke-3 select-none"
       >
-        Admin Panel
+        Admin Panel <?php echo $username ?>
       </h1>
       <input
         id="url-bg-vid-input"
