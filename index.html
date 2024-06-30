@@ -12,89 +12,124 @@
     <script src="Assets/js/tailwind.config.js"></script>
 </head>
 
-<body class="overflow-x-hidden">
-    <nav class="z-[10000] fixed top-0 left-0 flex justify-between items-center w-full h-20 px-12 py-2.5 bg-trans70">
-        <a href="#" class="flex justify-between items-center px-10 h-full gap-16">
-            <img src="Assets/Media/Logo.webp" alt="logo" class="object-cover h-12 w-12 rounded-xl">
-            <h2 class="font-roadrage text-4xl">Deadly Air</h2>
+<body class="flex flex-col items-center overflow-x-hidden">
+    <nav class="z-[10000] fixed top-0 left-0 flex justify-between items-center w-full h-20 px-12 py-2.5 bg-trans70 max-sm:px-2">
+        <a href="#" class="flex justify-between items-center h-full gap-16 max-lg:gap-4 max-sm:text-base max-sm:gap-2">
+            <img src="Assets/Media/Logo.webp" alt="logo" class="object-cover h-12 w-12 rounded-xl max-sm:w-8 max-sm:h-8">
+            <h2 class="font-roadrage text-4xl max-sm:text-2xl max-xs:text-xl">Deadly Air</h2>
         </a>
-        <div class="flex justify-between items-center h-full gap-16 text-xl"><a href="#Apropos">À Propos</a><a
+        <div class="flex justify-between items-center h-full gap-16 text-xl max-lg:gap-4 max-sm:text-xs"><a href="#Apropos">À Propos</a><a
                 href="#Blog">Blog</a><a href="#Boutique">Boutique</a><a href="#Contact">Contact</a></div>
     </nav>
     <section
-      class="relative flex justify-center items-center bg-gris w-full h-screen"
+      class="relative flex justify-center items-center bg-gris w-full h-screen max-lg:h-[75vh]"
     >
       <video class="absolute z-0 w-full h-full object-cover" autoplay loop muted>
           <source src="http://88.127.116.195:16384/Deadly-Air/bg-vid.mp4" type="video/mp4">    
       </video>
       <!--On met une photo car la vidéo est trop gourmande pour github -->
       <h1
-        class="z-10 text-9xl font-roadrage text-transparent bg-clip-text border-solid text-stroke-3 select-none text-center px-8"
+        class="z-10 text-9xl font-roadrage text-transparent bg-clip-text border-solid text-stroke-3 select-none text-center px-8 max-sm:text-6xl max-sm:text-stroke-2 max-sm:"
       >
         Vivez l'adrénaline avec Deadly Air
       </h1>
     </section>
 
-    <section id="Apropos" class="flex flex-col h-auto pt-16 min-h-screen">
-        <header class="flex justify-between items-center px-8 py-2.5 h-20 w-full">
-            <h2 class="font-roadrage text-6xl">À Propos</h2>
-            <i class="text-vert-1 text-xl text-end text-base font-oswald_light">— Vivre pour rouler, rouler pour vivre.</i>
+    <section id="Apropos" class="container flex flex-col h-auto pt-16 px-4 min-h-screen">
+        <header class="flex justify-between items-center gap-16 px-8 py-2.5 h-20 w-full max-sm:gap-2">
+            <h2 class="font-roadrage text-6xl max-sm:text-4xl">À Propos</h2>
+            <i class="text-vert-1 text-xl text-end max-lg:text-base max-lg:font-oswald_light max-sm:font-oswald_extralight max-sm:text-xs">— Vivre pour rouler, rouler pour vivre.</i>
         </header>
-        <div class="grid grid-cols-3 centent-envenly justify-items-center gap-16 p-[50px] xl:">
-            <article id="#A1" class="relative gap-y-2 5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-80 h-72">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+            <article id="#A1" class="relative gap-y-2.5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-72 w-4/12 h-64 max-lg:h-fit max-lg:min-h-full">
                 <div class="flex justify-end w-full h-4">
-                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg  w-fit text-right font-oswald_bold text-xl">Origine du Groupe</h4>
+                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg w-fit text-right font-oswald_bold text-xl max-sm:text-base max-sm:font-oswald_medium">Origine du Groupe</h4>
                 </div>
-                <p class="font-oswald_extralight text-base">Deadly Air a été fondé en mai 2024 par Cuic, qui a invité ses amis à créer un groupe de MTB dirt. Notre aventure a commencé avec une passion commune pour le dirt biking et l'envie de partager cette passion avec le monde entier. Cuic, notre fondateur principal, a toujours rêvé de capturer et de diffuser des vidéos de haute qualité qui émerveillent et inspirent la communauté du MTB dirt.</p>
+                <p class="font-oswald_extralight text-base max-lg:font-sm max-sm:font-xs max-sm:font-oswald_extralight">Deadly Air a été fondé en mai 2024 par Cuic, qui a invité ses amis à créer un groupe de MTB dirt. <br> Notre aventure a commencé avec une passion commune pour le dirt biking et l'envie de partager cette passion avec le monde entier. <br> Cuic, notre fondateur principal, a toujours rêvé de capturer et de diffuser des vidéos de haute qualité qui émerveillent et inspirent la communauté du MTB dirt.</p>
             </article>
-            <article id="#A2" class="relative bg-[url(Assets/Media/SupermanGap.png)] bg-cover bg-repeat bg-center gap-y-2 5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-80 w-full h-72">
+            <article id="#A2" class="relative bg-[url(Assets/Media/SupermanGap.png)] bg-cover bg-repeat bg-center gap-y-2.5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-72 w-4/12 h-64 max-sm:hidden">
                 <div class="flex justify-end w-full h-4">
                     <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg backdrop-blur-lg  w-fit text-right font-oswald_bold text-xl">26/06/24</h4>
                 </div>
             </article>
-            <article id="#A3" class="relative gap-y-2 5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-80 h-72">
+            <article id="#A3" class="relative gap-y-2.5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-72 w-4/12 h-64 max-lg:h-fit max-lg:min-h-full max-sm:hidden">
                 <div class="w-full h-4">
-                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg  w-fit text-right font-oswald_bold text-xl">Mission et Objectifs</h4>
+                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg w-fit text-right font-oswald_bold text-xl max-sm:text-base max-sm:font-oswald_medium">Mission et Objectifs</h4>
                 </div>
-                <p class="font-oswald_extralight text-base">Notre mission chez Deadly Air est de créer des vidéos époustouflantes et de faire rêver le monde du MTB dirt. Nous souhaitons montrer la beauté et l'adrénaline de ce sport à travers nos aventures et nos réalisations. Chaque saut, chaque figure, chaque ride est une occasion de repousser les limites et de capturer des moments inoubliables.</p>
+                <p class="font-oswald_extralight text-base max-lg:font-sm max-sm:font-xs max-sm:font-oswald_extralight">Notre mission chez Deadly Air est de créer des vidéos époustouflantes et de faire rêver le monde du MTB dirt. <br> Nous souhaitons montrer la beauté et l'adrénaline de ce sport à travers nos aventures et nos réalisations. <br> Chaque saut, chaque figure, chaque ride est une occasion de repousser les limites et de capturer des moments inoubliables.</p>
             </article>
-            <article id="#A4" class="relative gap-y-2 5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-80 h-72">
+            <article id="#A4" class="relative gap-y-2.5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-72 w-4/12 h-64 max-lg:h-fit max-lg:min-h-full">
                 <div class="flex justify-end w-full h-4">
-                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg  w-fit text-right font-oswald_bold text-xl">Valeurs et Culture</h4>
+                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg w-fit text-right font-oswald_bold text-xl max-sm:text-base max-sm:font-oswald_medium">Valeurs et Culture</h4>
                 </div>
-                <p class="font-oswald_extralight text-base">Deadly Air repose sur des valeurs de tranquillité et de camaraderie. Pour nous, rider entre amis est l'une des meilleures expériences au monde. Le nom "Deadly Air" symbolise le sentiment de liberté que nous éprouvons en étant dans les airs, mais rappelle aussi que ce sport comporte des risques, et que chaque moment est précieux.</p>
+                <p class="font-oswald_extralight text-base max-lg:font-sm max-sm:font-xs max-sm:font-oswald_extralight">Deadly Air repose sur des valeurs de tranquillité et de camaraderie. <br> Pour nous, rider entre amis est l'une des meilleures expériences au monde. <br> Le nom "Deadly Air" symbolise le sentiment de liberté que nous éprouvons en étant dans les airs, mais rappelle aussi que ce sport comporte des risques, et que chaque moment est précieux.</p>
             </article>
-            <article id="#A5" class="relative gap-y-2 5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-80 h-72">
+            <article id="#A5" class="relative gap-y-2.5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-72 w-4/12 h-64 max-lg:h-fit max-lg:min-h-full max-sm:hidden">
                 <div class="flex justify-end w-full h-4">
-                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg w-fit text-right font-oswald_bold text-xl">Événements et Activités</h4>
+                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg w-fit text-right font-oswald_bold text-xl max-sm:text-base max-sm:font-oswald_medium">Événements et Activités</h4>
                 </div>
-                <p class="font-oswald_extralight text-base">Actuellement, nous ne pouvons pas encore organiser d'événements à cause de notre faible visibilité. Cependant, nous travaillons dur pour gagner en notoriété et espérons organiser des compétitions et des rencontres dans un avenir proche.</p>
+                <p class="font-oswald_extralight text-base max-lg:font-sm max-sm:font-xs max-sm:font-oswald_extralight">Actuellement, nous ne pouvons pas encore organiser d'événements à cause de notre faible visibilité. <br> Cependant, nous travaillons dur pour gagner en notoriété et espérons organiser des compétitions et des rencontres dans un avenir proche.</p>
             </article>
-            <article id="#A6" class="relative gap-y-2 5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-80 h-72">
+            <article id="#A6" class="relative gap-y-2.5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-72 w-4/12 h-64 max-lg:h-fit max-lg:min-h-full max-sm:hidden">
                 <div class="flex justify-end w-full h-4">
-                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg  w-fit text-right font-oswald_bold text-xl">Membres et Communauté</h4>
+                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg  w-fit text-right font-oswald_bold text-xl max-sm:text-base max-sm:font-oswald_medium">Membres et Communauté</h4>
                 </div>
-                <p class="font-oswald_extralight text-base">Deadly Air est composé de 6 membres passionnés : 4 riders et 2 caméramans. Nos riders sont encore débutants, mais deux d'entre eux, Loic et Cuic, se démarquent par leur détermination et leur désir de progresser. Nos caméramans sont très compétents et capturent nos aventures avec un talent remarquable.</p>
+                <p class="font-oswald_extralight text-base max-lg:font-sm max-sm:font-xs max-sm:font-oswald_extralight">Deadly Air est composé de 6 membres passionnés : 4 riders et 2 caméramans. <br> Nos riders sont encore débutants, mais deux d'entre eux, Loic et Cuic, se démarquent par leur détermination et leur désir de progresser. <br> Nos caméramans sont très compétents et capturent nos aventures avec un talent remarquable.</p>
             </article>
-            <article id="#A7" class="relative gap-y-2 5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-80 h-72">
+            <article id="#A7" class="relative gap-y-2.5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-72 w-4/12 h-64 max-lg:h-fit max-lg:min-h-full max-sm:hidden">
                 <div class="flex justify-end w-full h-4">
-                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg  w-fit text-right font-oswald_bold text-xl">Partenariats et Collaborations</h4>
+                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg  w-fit text-right font-oswald_bold text-xl max-sm:text-base max-sm:font-oswald_medium">Partenariats et Collaborations</h4>
                 </div>
-                <p class="font-oswald_extralight text-base">Nous sommes un groupe encore jeune et nous ne travaillons pas encore avec d'autres organisations ou sponsors. Cependant, nous sommes ouverts aux collaborations et espérons trouver des partenaires pour soutenir notre croissance et nos projets futurs.</p>
+                <p class="font-oswald_extralight text-base max-lg:font-sm max-sm:font-xs max-sm:font-oswald_extralight">Nous sommes un groupe encore jeune et nous ne travaillons pas encore avec d'autres organisations ou sponsors. <br> Cependant, nous sommes ouverts aux collaborations et espérons trouver des partenaires pour soutenir notre croissance et nos projets futurs.</p>
             </article>
-            <article id="#A8" class="relative gap-y-2 5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-80 h-72">
+            <article id="#A8" class="relative gap-y-2.5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-72 w-4/12 h-64 max-lg:h-fit max-lg:min-h-full">
                 <div class="flex justify-end w-full h-4">
-                    <h4 class="text-right font-oswald_bold text-xl">Vision Future</h4>
+                    <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg  w-fit text-right font-oswald_bold text-xl max-sm:text-base max-sm:font-oswald_medium">Vision Future</h4>
                 </div>
-                <p class="font-oswald_extralight text-base">Dans les cinq prochaines années, nous voyons Deadly Air comme un groupe de passionnés toujours en quête de nouveaux défis et de spectacles encore plus impressionnants. Nous rêvons d'avoir notre propre terrain, avec des bosses et des pistes que nous pourrons aménager à notre guise, et où nous pourrons continuer à évoluer librement.</p>
+                <p class="font-oswald_extralight text-base max-lg:font-sm max-sm:font-xs max-sm:font-oswald_extralight">Dans les cinq prochaines années, nous voyons Deadly Air comme un groupe de passionnés toujours en quête de nouveaux défis et de spectacles encore plus impressionnants. <br> Nous rêvons d'avoir notre propre terrain, avec des bosses et des pistes que nous pourrons aménager à notre guise, et où nous pourrons continuer à évoluer librement.</p>
             </article>
-            <article id="#A9" class="relative bg-[url(Assets/Media/Wipe.png)] bg-cover bg-repeat bg-center gap-y-2 5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-80 w-full h-72">
+            <article id="#A9" class="relative bg-[url(Assets/Media/Wipe.png)] bg-cover bg-repeat bg-center gap-y-2.5 py-5 px-8 flex flex-col bg-gris rounded-lg rounded-tl-[50px] rounded-br-[50px] text-blanc min-w-72 w-4/12 h-64 max-sm:hidden">
                 <div class="flex justify-end w-full h-4">
                     <h4 class="p-2.5 absolute top-0 right-[-1px] rounded-bl-3xl rounded-tr-lg backdrop-blur-lg  w-fit text-right font-oswald_bold text-xl">26/06/24</h4>
                 </div>   
             </article>
+
+            <button id="ShowApropos" class="hidden max-sm:block text-center w-full bg-vert-2 text-blanc rounded-lg py-4 px-2">En Voir Plus</button>
         </div>
     </section>
+    <script>
+        let windowWidth = window.innerWidth;
+        let articlesApropos = document.querySelectorAll('#Apropos article');
+        const buttonShowApropos = document.querySelector('#ShowApropos');
+        buttonShowApropos.addEventListener('click', function(){
+            articlesApropos.forEach((articleApropos) => {
+                if (articleApropos.classList.contains('max-sm:hidden')) {
+                    articleApropos.classList.remove('max-sm:hidden');
+                    articleApropos.classList.add('not-hidden');
+                    buttonShowApropos.innerText = "En Voir Moins";
+                    // console.log(windowWidth);
+                }
+                else if (articleApropos.classList.contains('not-hidden')) {
+                    articleApropos.classList.add('max-sm:hidden');
+                    articleApropos.classList.remove('not-hidden');
+                };
+            });
+        });
+        window.addEventListener('resize', function(){
+            windowWidth = window.innerWidth;
+            articlesApropos.forEach((articleApropos) => {
+                if (windowWidth < 640){
+                    if (articleApropos.classList.contains('not-hidden')) {
+                        articleApropos.classList.add('max-sm:hidden');
+                        articleApropos.classList.remove('not-hidden');
+                        buttonShowApropos.innerText = "En Voir Plus";
+                        window.location.href = "#Apropos";
+                        // console.log(windowWidth);
+                    }
+                }
+            });
+        });
+    </script>
     <script>
 // Attendre que le DOM soit complètement chargé
 document.addEventListener('DOMContentLoaded', function() {
@@ -151,13 +186,13 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 
 
-    <section id="Blog" class="flex flex-col items-center justify-around min-h-screen">
-        <header class="flex justify-between items-center px-8 py-2.5 h-20 w-full">
-            <h2 class="font-roadrage text-6xl">Blog</h2>
+    <section id="Blog" class="flex flex-col items-center justify-around min-h-screen w-full">
+        <header class="container flex justify-between items-center gap-16 px-8 py-2.5 h-20 w-full max-sm:gap-2">
+            <h2 class="font-roadrage text-6xl max-sm:text-4xl">Blog</h2>
             <button class="lg:hidden h-full w-fit text-align px-8 text-blanc rounded-lg bg-vert-2">Voir tous les blogs</button>
         </header>
-        <div class="flex w-full text-blanc justify-around">
-            <div class="flex gap-8 justify-evenly px-12 w-[80%]">
+        <div class="flex w-full text-blanc justify-around max-lg:h-full">
+            <div class="flex gap-8 justify-evenly px-12 w-[80%] max-lg:w-full max-lg:h-[50vh]">
                 <article class="flex flex-col bg-gris border-4 border-noir rounded-lg px-4 py-2.5 max-w-96 min-w-64 max-lg:w-80">
                     <img src="Assets/Media/SupermanGap.png" alt="Image Blog" class="rounded-lg h-2/4 object-cover">
                     <div class="h-2/4">
@@ -194,13 +229,13 @@ document.addEventListener('DOMContentLoaded', function() {
             </button>
         </div>
     </section>
-    <section id="Boutique" class="flex flex-col items-center justify-around h-screen">
-        <header class="flex justify-between items-center px-8 py-2.5 h-20 w-full">
-            <h2 class="font-roadrage text-6xl">Boutique</h2>
-            <i class="text-vert-1 text-xl text-end text-base font-oswald_light">— Supportez Deadly Air et montrez votre passion pour le bike avec nos produit
+    <section id="Boutique" class="container flex flex-col items-center justify-around h-screen w-full">
+        <header class="flex justify-between items-center gap-8 px-8 py-2.5 h-20 w-full max-sm:gap-2">
+            <h2 class="font-roadrage text-6xl max-sm:text-4xl">Boutique</h2>
+            <i class="text-vert-1 text-xl text-end max-lg:text-base max-lg:font-oswald_light max-sm:font-oswald_extralight max-sm:text-xs">— Supportez Deadly Air et montrez votre passion pour le bike avec nos produit
                 exclusifs.</i>
         </header>
-        <div class="flex items-center justify-center gap-8">
+        <div class="container flex flex-wrap items-center justify-center gap-8">
             <stripe-buy-button class="shadow-2xl" buy-button-id="buy_btn_1PWIuu04M5kzYwtLd07fN3Yd"
                 publishable-key="pk_test_51PWIkA04M5kzYwtLw3sfjOEcCfScxJoYlSr5apaG758qY0AixsxFqJftHyUzWB8ObsDhNciwzgdlSsB4dFsvjeDo00lYVnQHOc">
             </stripe-buy-button>
@@ -209,12 +244,12 @@ document.addEventListener('DOMContentLoaded', function() {
             </stripe-buy-button>
         </div>
     </section>
-    <section id="Contact" class="flex flex-col items-center justify-around pt-16 h-screen text-blanc bg-gris">
-        <header class="flex justify-between items-center px-8 py-2.5 h-20 w-full">
-            <h2 class="font-roadrage text-6xl">Contact</h2>
-            <i class="text-vert-1 text-xl">-  Vous avez des questions, des suggestions, ou vous voulez simplement dire bonjour ? Nous aimerions avoir de vos nouvelles.</i>
+    <section id="Contact" class="flex flex-col items-center justify-around pt-16 h-screen text-blanc bg-gris w-full">
+        <header class="container flex justify-between items-center gap-16 px-8 py-2.5 h-20 w-full max-sm:gap-2">
+            <h2 class="font-roadrage text-6xl max-sm:text-4xl">Contact</h2>
+            <i class="text-vert-1 text-xl text-end max-lg:text-base max-lg:font-oswald_light max-sm:font-oswald_extralight max-sm:text-xs">-  Vous avez des questions, des suggestions, ou vous voulez simplement dire bonjour ? <br> Nous aimerions avoir de vos nouvelles.</i>
         </header>
-        <div class="flex jsutify-evenly items-center flex-1 gap-16">
+        <div class="flex jsutify-between items-center flex-1 gap-8 px-4 max-sm:flex-col max-sm:items-baseline">
             <div class="h-2/4">
                 <form   action="https://formspree.io/f/mzzppqep" method="POST" class="flex flex-col gap-y-16 h-full">
                     <div class="flex justify-between gap-16">
@@ -233,9 +268,9 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </section>
-    <footer class="flex flex-col min-h-[100px] bg-gris text-blanc border-t-2 border-trans70">
+    <footer class="flex flex-col min-h-[100px] bg-gris text-blanc border-t-2 border-trans70 w-full">
         <img src="Assets/Media/Logo.webp" alt="Logo" class="max-h-[80px] max-w-[80px] m-4 rounded-lg">
-        <div class="flex justify-between w-full px-2.5 py-4 text-sm">
+        <div class="flex justify-between w-full px-2.5 py-4 text-sm max-lg:text-xs max-md:flex-col max-md:justify-center max-md:items-center max-md:text-sm max-md:text-center">
             <div>
                 <a href="Politique/politique_de_confidentialite.html" class="underline hover:text-vert-1">Politique de confidentialité</a>
                 <a href="Politique/cgu.html" class="underline hover:text-vert-1">Conditions d'utilisation</a>

@@ -57,6 +57,26 @@
 #Apropos article {
   scale: 0.2;
   opacity: 0;
+  width: calc(33.33% - 20px);
+}
+@media (max-width: 1024px) {
+  #Apropos article{
+    width: 45%;
+    &:nth-child(1){
+      width: 100%;
+      height: fit-content;
+    }
+  }
+}
+@media (max-width: 640px) {
+  #Apropos article{
+    width: 100%;
+  }
+}
+
+.small-rez{
+  display: flex;
+  background-color: red;
 }
 
 .animation-apparition-a-propos-1{animation: apparition-a-propos .2s .0s  forwards ease-out;}
